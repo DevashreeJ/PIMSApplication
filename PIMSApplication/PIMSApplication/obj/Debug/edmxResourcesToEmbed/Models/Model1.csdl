@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PIMSdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="StudentInformationTable">
+    <Key>
+      <PropertyRef Name="District_Code" />
+      <PropertyRef Name="School_Year_Date" />
+      <PropertyRef Name="Student_Id" />
+      <PropertyRef Name="Reporting_Date" />
+      <PropertyRef Name="Category_Set_code" />
+      <PropertyRef Name="Measure_type" />
+    </Key>
+    <Property Name="District_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="School_Year_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Student_Id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Reporting_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Category_Set_code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Measure_type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Act16_fund_Category" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PIMSdbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="StudentInformationTables" EntityType="Self.StudentInformationTable" />
+  </EntityContainer>
+</Schema>

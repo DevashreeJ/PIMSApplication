@@ -1,0 +1,67 @@
+﻿@model IEnumerable<PIMSApplication.Models.StudentInformationTable>
+
+@{
+    ViewBag.Title = "ShowEntries";
+}
+
+<h2>Show Entries</h2>
+
+<p>
+    @Html.ActionLink("Create New", "ApplicationForm")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.District_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.School_Year_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reporting_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category_Set_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Measure_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Act16_fund_Category)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.District_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.School_Year_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reporting_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category_Set_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Measure_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Act16_fund_Category)
+        </td>
+        <td>
+            @Html.ActionLink("Export as template", "DisplayFormat", new {  id=item.District_Code })
+        </td>
+    </tr>
+}
+
+</table>

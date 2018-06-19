@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PIMSdbModelStoreContainer" CdmEntityContainer="PIMSdbEntities">
+    <EntitySetMapping Name="StudentInformationTables">
+      <EntityTypeMapping TypeName="PIMSdbModel.StudentInformationTable">
+        <MappingFragment StoreEntitySet="StudentInformationTable">
+          <ScalarProperty Name="District_Code" ColumnName="District_Code" />
+          <ScalarProperty Name="School_Year_Date" ColumnName="School_Year_Date" />
+          <ScalarProperty Name="Student_Id" ColumnName="Student_Id" />
+          <ScalarProperty Name="Reporting_Date" ColumnName="Reporting_Date" />
+          <ScalarProperty Name="Category_Set_code" ColumnName="Category_Set_code" />
+          <ScalarProperty Name="Measure_type" ColumnName="Measure_type" />
+          <ScalarProperty Name="Act16_fund_Category" ColumnName="Act16_fund_Category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
